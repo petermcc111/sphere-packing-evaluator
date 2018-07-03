@@ -1,7 +1,7 @@
 Source codes for sphere packing evaluator
 ===========================================
 
-The source scripts are written for Python 3.6
+<h3>Python 3.6 is required for executing the source scripts.</h3>
 
 <b>"main.py" is the main program</b>
 
