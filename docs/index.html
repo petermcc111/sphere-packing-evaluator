@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 	
+	<title>Capacity Calculator for Spherical Objects</title>
+	<link rel="shortcut icon" type="source/image/x-icon" href="" />
+	<link href="vendors/bootstrap4/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<header class="container">
+		<h2>Capacity Calculator for Spherical Objects</h2>
+		<h6>Estimate the capacity for spherical objects</h6>
+	</header>
+	<div class="alert alert-warning">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		Only applicable for cuboid containers. All spherical objects are assumed to be identical.
+		
+	</div>
+	<div class="container main"></div>
+	<hr />
+	<footer><h6>c2018 Peter Chau</h6></footer>
+
+	<!--Vendor Libraries-->
+	<script crossorigin src="vendors/react.production.min.js"></script>
+	<script crossorigin src="vendors/react-dom.production.min.js"></script>
+	<script crossorigin src="vendors/jquery-3.3.1.min.js"></script>
+	<script crossorigin src="vendors/bootstrap4/bootstrap.bundle.min.js"></script>
+
+	<!--Simulation scripts-->
+	<script src="resources/js/scp.js"></script>
+	<script src="resources/js/hcp.js"></script>
+	<script src="resources/js/fcp.js"></script>
+	<script src="resources/js/runtime.js"></script>
+	<script src="resources/js/final.js"></script>
+	<script src="resources/js/input.js"></script>
+
+	<!--Display scripts-->
+	<script src="resources/js/form.js"></script>
+	<script src="resources/js/app.js"></script>
+
+</body>
+</html>
