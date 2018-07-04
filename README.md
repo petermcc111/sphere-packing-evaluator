@@ -2,7 +2,7 @@
 
 This is a simple program for evaluating the capacity of a container with spherical objects.
 
-Online version of the program can be accessed at https://petermcc111.github.io/sphere-packing-evaluator/
+#### Online access: https://petermcc111.github.io/sphere-packing-evaluator/
 
 Arrangement structures applied: (links to view the 3D model for respective structures)
 - Simple cubic (http://www.chemtube3d.com/solidstate/_simplecubic(final).htm)
