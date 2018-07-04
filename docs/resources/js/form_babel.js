@@ -64,8 +64,8 @@ class InputForm extends React.Component {
 				<input type="submit" className="btn" value="Calculate" />
 				<input type="reset" className="btn" value="Reset" />
 			</div>
-		</form>)
-	}
+		</form>
+	)}
 }
 
 /******************************************/
@@ -107,9 +107,10 @@ class OutputForm extends React.Component {
 				<div>Radius of shperes: {this.radius}</div>
 				<div>Dimension of container: {this.length} × {this.width} × {this.height}</div>
 				<hr/>
-				<h4>Results by methods</h4>
-				<table>
-					<thead>
+				<h4>Results</h4>
+				<div>The estimated maximum capacity of the container is {this.result[0].model} based on {this.result[0].name} structure.</div>
+				<table className="table table-bordered table-hover">
+					<thead className="thead-light">
 						<tr>
 							<th>Calculation method</th>
 							<th>Value by theory</th>
@@ -118,9 +119,6 @@ class OutputForm extends React.Component {
 					</thead>
 					{this.infoTable}
 				</table>
-				
-				<div>By simulation calculation, {this.result[0].name} results in maximum capacity of the container.</div>
-				<div>The maximum capacity of the container is {this.result[0].model} sphere(s).</div>
 			</div>
 			<div className="div-button">
 				<input type="button" id="retry" className="btn" value="Retry" />
@@ -142,10 +140,10 @@ class ErrorForm extends React.Component {
 		this.width = this.urlList.width+this.urlList.width_unit
 		this.height = this.urlList.height+this.urlList.height_unit
 		if(this.props.result.warning ===1){
-			this.infoTable = this.noResult(1)
+			this.info = this.noResult(1)
 		}
 		if(this.props.result.warning ===0){
-			this.infoTable = this.noResult(0)
+			this.info = this.noResult(0)
 		}
 	}
 	componentDidMount(){
@@ -154,6 +152,7 @@ class ErrorForm extends React.Component {
 			ReactDOM.render(<InputForm />,document.querySelector(".main"))
 		}, true)
 	}
+	// display error
 	noResult(e){
 		if(e==1){return (
 			<h4>No spheres can be stored because of limited space. Simulation Terminated.</h4>
@@ -168,7 +167,7 @@ class ErrorForm extends React.Component {
 				<div>Radius of shperes: {this.radius}</div>
 				<div>Dimension of container: {this.length} × {this.width} × {this.height}</div>
 				<hr/>
-				{this.infoTable}
+				<h4>{this.info}</h4>
 			</div>
 			<div className="div-button">
 				<input type="button" id="retry" className="btn" value="Retry" />
