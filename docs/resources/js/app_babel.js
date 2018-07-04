@@ -8,7 +8,8 @@ var HTML = function(){
 	this.main=document.querySelector(".main")
 	this.urlList = this.parseURLParams(window.location.href)
 	if(this.urlList!== undefined && this.urlList.radius !==undefined){
-		this.input = new Input(this.urlList)
+		var list = Object.assign({}, this.urlList)
+		this.input = new Input(list)
 		this.result = this.input.getResult()
 		if (this.result.warning != undefined){
 			ReactDOM.render(<ErrorForm main={this.main} result={this.result} urlList={this.urlList} />,this.main)

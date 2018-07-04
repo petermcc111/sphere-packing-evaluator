@@ -73,7 +73,6 @@ class InputForm extends React.Component {
 class OutputForm extends React.Component {
 	constructor(props){
 		super(props)
-		this.main = document.querySelector(".main")
 		this.result = this.props.result
 		this.resultTable = this.resultTable.bind(this)
 		this.radius = this.props.urlList.radius+this.props.urlList.radius_unit
@@ -136,18 +135,16 @@ class OutputForm extends React.Component {
 class ErrorForm extends React.Component {
 	constructor(props){
 		super(props)
-		this.main = document.querySelector(".main")
-		this.result = this.props.result
 		this.urlList  = this.props.urlList
 		this.noResult = this.noResult.bind(this)
 		this.radius = this.urlList.radius+this.urlList.radius_unit
 		this.length = this.urlList.length+this.urlList.length_unit
 		this.width = this.urlList.width+this.urlList.width_unit
 		this.height = this.urlList.height+this.urlList.height_unit
-		if(this.result.warning ==1){
+		if(this.props.result.warning ===1){
 			this.infoTable = this.noResult(1)
 		}
-		if(this.result.warning ==0){
+		if(this.props.result.warning ===0){
 			this.infoTable = this.noResult(0)
 		}
 	}
